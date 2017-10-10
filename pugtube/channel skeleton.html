@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PugTube</title>
+		<script>
+		function search() {
+			var searchbar = document.getElementById("search");
+			var source = document.getElementById("source");
+			var search = searchbar.value;
+			var image = document.getElementById("channelimg");
+			var channelname = document.getElementById("channelname");
+			source.src = "channels/" + search + "/videos/feature.mp4";
+			image.src = "channels/" + search + "/images/channel photo.jpg";
+			channelname.innerHTML = search;
+			refresh();
+		}
+		function refresh() {
+			var refresh = document.getElementById("content");
+			refresh.remove();
+			document.getElementById("videodiv").appendChild(refresh);
+		}
+		</script>
+	</head>
+	<body>
+		<h1><img src="./images/logo.png" width="5%" height="5%"/> Beta</h1>
+		
+		<input type="text" name="enter" class="enter" value="Channel Name" id="search" style="margin-left:50px; display: inline"/>
+		<button onClick="search()">Search</button>
+		<br></br>
+		<img src="" id="channelimg" style="border-radius: 50%; display: inline" width="5%" height="5%" /><h2 id="channelname" style="display: inline; vertical-align: center"></h2>
+		<br></br>
+		<div id="videodiv">
+			<video width="320" height="240" controls id="content">
+			<source src="" type="video/mp4" id="source">
+			Your browser does not support PugTube. Try using Google Chrome.
+			</video>
+		</div>
+	</body>
+</html>
