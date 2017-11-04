@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Robogaming</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <script>
+        window.resizeTo(479,499);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { 
+    $(':input', document.myForm).bind("change", function() { needToConfirm = true; }); // Prevent accidental navigation away
+});
+    </script>
+    <script>
+        var needToConfirm = true;
+
+  window.onbeforeunload = confirmExit;
+  function confirmExit()
+  {
+    if (needToConfirm)
+      return "Your progress will not be saved.";
+  }
+    </script>
+</head>
+
+<body>
+    <div id="sneks" style="margin:0px; padding:0px;">
+        <p id="launchProblem" onclick="launchSneks(); this.remove()" width=50 height=50>Click this if your game has not launched yet. If it still does not launch, make sure you have javascript enabled, and try again.</p>
+        <canvas id="sneksCanvas" style="display:none; margin:0px; padding:0px;" onclick="closePopup();"></canvas>
+        <script type="text/javascript" src="../js/games/sneks.js" onload="launchSneks(); document.getElementById(&quot;launchProblem&quot;).remove();"></script>
+        <div id="resources">
+            
+        </div>
+    </div>
+</body>

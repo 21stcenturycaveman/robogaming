@@ -4,9 +4,15 @@
     <title>Robogaming</title>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <script src="./js/signin.js"></script>
 </head>
 
 <body>
+    <div id="signin" style="">
+        <button class="x" onclick="this.parentNode.style.display=none;" style="color:red;">X</button>
+        <br />
+        <button onclick="signIn()"style="border:2px solid black;">Sign In</button>
+    </div>
     <h1>Scratch Projects</h1>
     <nav>
         <ul>
@@ -20,4 +26,9 @@
         </ul>
     </nav>
     <h3>Suggested Games</h3>
+    <div style="overflow-y: hidden; height: 720px; overflow-x: hidden; width: 960px;" id="applet">
+        <iframe style="margin-top:-48px; margin-left:-12px;" allowtransparency="false" width="490" height="410" bgcolor=#F11111 src="http://scratch.mit.edu/projects/embed/183906208/?autostart=false"
+            allowfullscreen></iframe>
+        <br/><br/>
+    </div>
 </body>
