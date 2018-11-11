@@ -1,8 +1,20 @@
 <script>
 w = window.open("https://classlink.discoveryeducation.com/builders/boards/assetGuid/1C66EB01-9DF5-4C07-B0B9-59E510201BDF/#mode=preview");
 setTimeout(function() {
-  w.document.getElementById("board-item-0").innerHTML="<iframe src=\"https://www.openprocessing.org/sketch/625253/embed/\" width=\"800\" height=\"300\"></iframe>";
+  w.document.getElementById("board-item-2").innerHTML="<iframe src=\"https://www.openprocessing.org/sketch/625253/embed/\" width=\"800\" height=\"300\"></iframe>";
   
+  items = document.getElementsByClassName("board-item");
+  for (item : items) {
+    item.childNodes[2].style.overflowY = "hidden";
+    item.style.backgroundColor = "lavenderblush";
+    item.style.border = "10px solid darkorange";
+    item.style.borderRadius = "5px";
+  }
+  
+  w.document.getElementById("board-item-4").style.overflowY = "auto";
+  w.document.getElementById("board-item-8").style.overflowY = "auto";
+  w.document.getElementById("board-item-15").style.overflowY = "auto";
+  w.document.getElementById("board-item-16").style.overflowY = "auto";
   window.close();
 },10000);
 </script>
