@@ -4,7 +4,7 @@ setTimeout(function() {
   w.document.getElementById("board-item-2").innerHTML="<iframe src=\"https://www.openprocessing.org/sketch/625253/embed/\" width=\"800\" height=\"300\"></iframe>";
   
   var items = document.getElementsByClassName("board-item");
-  for (var i = 0; i < items.length; i++;) {
+  for (var i = 0; i < items.length; i++) {
     items[i].childNodes[2].style.overflowY = "hidden";
     items[i].style.backgroundColor = "lavenderblush";
     items[i].style.border = "10px solid darkorange";
@@ -16,5 +16,5 @@ setTimeout(function() {
   w.document.getElementById("board-item-15").style.overflowY = "auto";
   w.document.getElementById("board-item-16").style.overflowY = "auto";
   window.close();
-},10000);
+},15000);
 </script>
